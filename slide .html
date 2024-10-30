@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slides</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown("slow");
+            
+            });
+            $("#flip1").click(function(){
+                $("#panel1").css("color","red").slideUp("slow").slideDown(2000);
+            
+        });
+        $("#flip2").click(function(){
+            $("#panel2").slideToggle("slow");
+        });
+    });
+    </script>
+<style>
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#box{
+    width: 100px;
+    height: 50px;
+    margin:20px;
+}
+  #panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: pink;
+  border: solid 1px palevioletred;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#panel {
+  padding: 10px;
+  display: none;
+}
+#panel2, #flip2, #panel1, #flip1 {
+  padding: 5px;
+  text-align: center;
+  background-color:pink;
+  border: solid 1px peachpuff;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+#panel2 {
+  padding: 10px;
+  display: none;
+}
+#panel1{
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+    <div id="box">
+        <div id="flip">Click to slide down panel</div>
+        <div id="panel">Slider</div>
+    </div>
+    <div id="box">
+        <div id="flip1">Click to slide up panel</div>
+        <div id="panel1">Slider</div>
+    </div>
+    <div id="box">
+        <div id="flip2">Click to slide toggle panel</div>
+        <div id="panel2">Slider</div>
+    </div>
+</body>
+</html>
